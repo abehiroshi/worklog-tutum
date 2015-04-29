@@ -1,0 +1,9 @@
+machine:
+  services:
+    - docker
+deployment:
+  master:
+    branch: master
+    commands:
+      - TUTUM_STACKNAME=worklog IMAGE_TAG=latest sh -e deploy.sh
+      - TUTUM_STACKNAME=worklog IMAGE_TAG=dev sh -e deploy.sh
