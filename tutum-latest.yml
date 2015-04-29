@@ -1,13 +1,11 @@
 worklog-web-latest:
   image: tutum.co/abehiroshi/worklog:latest
   links:
-    - db
+    - worklog-db-latest:db
   autorestart: always
   autoredeploy: true
   ports:
     - "3000:3000"
-  environment:
-    DB_NODE: worklog-db-latest
   command: npm run start
 worklog-db-latest:
   image: mongo
