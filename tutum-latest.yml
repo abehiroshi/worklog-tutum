@@ -6,6 +6,8 @@ worklog-web-latest:
   autoredeploy: true
   ports:
     - "3000:3000"
+  environment:
+    DB_NODE: worklog-db-latest
   command: npm run start
 worklog-db-latest:
   image: mongo
