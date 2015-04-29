@@ -1,4 +1,4 @@
-web:
+worklog-web-dev:
   image: tutum.co/abehiroshi/worklog:dev
   links:
     - db
@@ -7,6 +7,6 @@ web:
   ports:
     - "3001:3000"
   command: npm run start
-db:
+worklog-db-dev:
   image: mongo
   command: mongod
